@@ -112,7 +112,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>© 2025 Santosh M Kulkarni | Built with 💻 React</p>
+        <p>© 2025 Santosh M Kulkarni</p>
       </footer>
     </div>
   );
