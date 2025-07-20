@@ -1,3 +1,4 @@
+/** App.css **/
 html {
   scroll-behavior: smooth;
 }
@@ -27,10 +28,11 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 
 .nav-list a {
@@ -70,20 +72,30 @@ body {
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 100px;
   border: 3px solid #ffcc00;
   margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.tagline {
+  font-size: 16px;
+  margin: 10px auto;
+  max-width: 90%;
 }
 
 .social-icons {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .icon {
-  width: 35px;
-  margin: 0 10px;
+  width: 32px;
+  margin: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -92,38 +104,41 @@ body {
 }
 
 .section {
-  padding: 50px 80px;
+  padding: 40px 20px;
   max-width: 1000px;
-  margin: auto;
+  margin: 20px auto;
   background-color: #1a1a1a;
-  margin-top: 20px;
   border-radius: 10px;
-  text-align: left;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+  text-align: left;
 }
 
 .section h2 {
   color: #ffcc00;
   margin-bottom: 15px;
+  font-size: 24px;
 }
 
 .section ul {
   padding-left: 20px;
+  line-height: 1.6;
 }
 
 .skill-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   padding: 0;
+  margin: 0;
 }
 
 .skill-list li {
   background: #2a2a2a;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 20px;
   color: #fff;
+  font-size: 14px;
 }
 
 .section a {
@@ -145,11 +160,35 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
   .section {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
 
   .skill-list {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 28px;
+    margin: 6px;
   }
 }
